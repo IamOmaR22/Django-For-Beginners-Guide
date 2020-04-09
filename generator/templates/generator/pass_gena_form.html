@@ -1,31 +1,36 @@
-<h1>Password Generator</h1>
+<div class="jumbotron bg-dark text-light mt-3">
+    <h1 class="display-4">Password Generator</h1>
+    <p class="lead">This is a simple Password Generator Web Application. You Can Generate Your Password Here.</p>
+    <hr class="my-4">
 
-<form action="{% url 'password' %}">
-    <select name="length">
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12" selected='selected'>12</option>
-        <option value="13">13</option>
-        <option value="14">14</option>
-    </select> Length
-    <br>
-    <input type="checkbox" name="uppercase"> Uppercase
-    <br>
+    <form action="{% url 'password' %}">
+        <select name="length">
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8" selected='selected'>8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="14">16</option>
+        </select> Length
+        <br>
+        <br>
 
-    <input type="checkbox" name="numbers"> Numbers & Lowercase
-    <br>
+        <input type="checkbox" name="uppercase"> Uppercase
+        <br>
+    
+        <input type="checkbox" name="numbers"> Numbers & Lowercase
+        <br>
+    
+        <input type="checkbox" name="special"> Special Characters
+        <br>
+        <br>
+    
+        <input class="btn btn-outline-warning" type="submit" value="Password Generator">
+    </form>
 
-    <input type="checkbox" name="special"> Special Characters
-    <br>
-
-    <input class="btn btn-info" type="submit" value="Password Generator">
-</form>
-
-<br>
-<br>
-<br>
-<a href="{% url 'about' %}">About</a>
+</div>

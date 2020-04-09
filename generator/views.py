@@ -14,7 +14,7 @@ def password(request):
         characters.extend(list('ABCDEFGHIJKLMNOPQRSTUVWXYZ'))
         
     if request.GET.get('special'):     # special is the name from html input (checkbox name)
-        characters.extend(list('~!@#$%^&*()'))
+        characters.extend(list('~!@#$%^&*().,[]{}|\/-_+'))
     
     if request.GET.get('numbers'):      # numbers is the name from html input (checkbox name)
         characters.extend(list('0123456789'))
