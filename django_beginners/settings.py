@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'password_generator.urls'
+ROOT_URLCONF = 'django_beginners.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'password_generator.wsgi.application'
+WSGI_APPLICATION = 'django_beginners.wsgi.application'
 
 
 # Database

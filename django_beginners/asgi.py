@@ -1,5 +1,5 @@
 """
-ASGI config for password_generator project.
+ASGI config for django_beginners project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'password_generator.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_beginners.settings')
 
 application = get_asgi_application()
