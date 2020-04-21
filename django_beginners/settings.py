@@ -139,3 +139,6 @@ try:
     from django_beginners.local_settings import *
 except ImportError:
     pass
+
+
+LOGIN_REDIRECT_URL = 'dashboard'

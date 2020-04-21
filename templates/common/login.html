@@ -12,7 +12,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Django For Beginners - Register</title>
+  <title>Django For Beginners - Login</title>
 
   <!-- Custom fonts for this template-->
   <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
@@ -36,19 +36,19 @@
             <div class="card-body p-0">
               <!-- Nested Row within Card Body -->
               <div class="row">
-                <div class="col-lg-4 d-none d-lg-block">
-                    <img src="{% static 'img/django-crm-home.png' %}" style="width: 20rem; height: 62rem;" class="rounded" alt="Cinque Terre">
+                <div class="col-lg-6 d-none d-lg-block">
+                    <img src="{% static 'img/django-crm-home.png' %}" style="width: 27rem; height: 28rem;" class="rounded" alt="Cinque Terre">
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-6">
                   <div class="p-5">
                     <div class="text-center">
-                      <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                      <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                     </div>
 
                     <form method="POST">
                         {% csrf_token %}
                         {{form | crispy}}
-                        <button type="submit" class="btn btn-primary">Register</button>
+                        <button type="submit" class="btn btn-primary">Login</button>
                       </form>
 
                     <hr>
