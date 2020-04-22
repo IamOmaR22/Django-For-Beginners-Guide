@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
 #from django.views.generic import TemplateView
-from apps.common.views import HomeView, SignUpView, DashboardView
+from apps.common.views import HomeView, SignUpView, DashboardView, ProfileUpdateView, ProfileView
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
@@ -43,6 +43,15 @@ urlpatterns = [
          ),
          name='password_reset_complete'),
 
+
+    path('profile-update/', ProfileUpdateView.as_view(), name='profile-update'),
+    path('profile/', ProfileView.as_view(), name='profile'),
+
     
 ]
 
+from django.conf import settings
+from django.conf.urls.static import static
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
