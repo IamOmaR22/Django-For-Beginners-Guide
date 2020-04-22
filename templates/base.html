@@ -36,6 +36,16 @@
         <div class="sidebar-brand-text mx-3">Contact <sup>Management</sup></div>
       </a>
 
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Profile -->
+      <li class="nav-item active">
+        <p class="nav-link">
+          Welcome {{user.first_name}} {{user.last_name}}!</p>
+      </li>
+
       <!-- Divider -->
       <hr class="sidebar-divider my-0">
 
@@ -68,7 +78,7 @@
 
       <!-- Nav Item - Profile -->
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{% url 'profile' %}">
           <i class="fas fa-fw fa-user"></i>
           <span>Profile</span></a>
       </li>
@@ -82,7 +92,7 @@
 
       <!-- Nav Item - Forgot Password -->
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{% url 'password_reset' %}">
           <i class="fas fa-fw fa-user"></i>
           <span>Forgot Password</span></a>
       </li>
@@ -115,6 +125,7 @@
 
       <!-- Main Content -->
       <div id="content">
+        {% include 'common/messages.html' %}
 
         {% block content %}
         
@@ -131,6 +142,52 @@
 
   </div>
   <!-- End of Page Wrapper -->
+
+  {% block script %}  {% endblock script %}
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
+
+  <script>
+    setTimeout(function(){
+      if ($('#msg').length > 0) {
+        $('#msg').remove();
+      }
+    }, 2000)
+  </script>
+
+  <!-- Date Time Picker JS -->
+  <script src="{% static 'date-time-phone/jquery-ui.js' %}" ></script>
+  <script src="{% static 'date-time-phone/jquery-ui-timepicker-addon.js' %}"></script> 
+
+  <script>
+    $( function() {
+        // $( "#id_birth_date" ).datetimepicker({ dateFormat: 'yy-mm-dd', maxDate: 0, controlType: 'select'}).attr("autocomplete", "off") ;
+        // $( "#id_birth_date" ).timepicker({ dateFormat: 'yy-mm-dd', maxDate: 0, controlType: 'select'}).attr("autocomplete", "off") ;
+        $( "#id_birth_date" ).datepicker({ dateFormat: 'yy-mm-dd' }).attr("autocomplete", "off") ;
+    });
+  </script>
+  <!-- Date Time Picker JS -->
+
+  <!-- Phone Mask JS -->
+  <script src="{% static 'date-time-phone/jquery-input-mask-phone-number.min.js' %}"></script> 
+
+  <script>
+    //(xxx) xxx-xxxx format code
+    $(document).ready(function () {
+        $('#id_phone_number').usPhoneFormat({
+            format: '(xxx) xxx-xxxx',
+        });   
+    });
+  </script>
+  <!-- Phone Mask JS -->
 
 </body>
 
