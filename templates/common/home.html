@@ -22,32 +22,24 @@
 
 </head>
 
-<body class="bg-gradient-secondary">
+{% include 'common/navbar.html' %}
+
+<body class="bg-gradient-light">
 
   <div class="container">
-
     <!-- Outer Row -->
     <div class="row justify-content-center">
-
-      <div class="col-xl-10 col-lg-12 col-md-9">
-
-        <div class="card o-hidden border-0 shadow-lg my-5">
-          <div class="card-body p-0">
-            <!-- Nested Row within Card Body -->
-            <div class="row">
-              <div class="col-sm-6 d-none d-lg-block">
-                <img src="{% static 'img/django-crm-home.png' %}" style="width: 27rem; height: 28rem;" class="rounded" alt="Cinque Terre">
-              </div>
-              <div class="col-sm-6">
-                <div class="p-5">
-                  <div class="text-center">
-                    <h1 class="h4 text-gray-900 mb-4">Welcome To Django Beginners Guide!</h1>
+      <div class="card mt-4">
+          <div class="card-body">
+              <div class="col-md-12">
+                    <h1 class="h4 text-gray-900 mb-4"><legend>Welcome To Django Beginners Guide!</legend></h1>
+                    <hr>
                   </div>
                   <a href="{% url 'register' %}" class="btn btn-outline-dark btn-block btn-lg">Register / Sign Up</a>
                   <br>
                   <a href="{% url 'login' %}" class="btn btn-outline-primary btn-block btn-lg">Login</a>
                   <br>
-                  <a href="#" class="btn btn-outline-success btn-block btn-lg">Forgot Password</a>
+                  <a href="#" class="btn btn-outline-warning btn-block btn-lg">Forgot Password</a>
                   <hr>
                   <a href="{% url 'social:begin' 'facebook' %}" class="btn btn-facebook btn-user btn-block">
                     <i class="fab fa-facebook-f fa-fw"></i>Login With Facebook
@@ -56,7 +48,7 @@
                   <div class="text-center">
                     <small class="blockquote">Md. Omar Faruk</small>
                   </div>
-                </div>
+
               </div>
             </div>
           </div>
