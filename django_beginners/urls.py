@@ -47,6 +47,8 @@ urlpatterns = [
     path('profile-update/', ProfileUpdateView.as_view(), name='profile-update'),
     path('profile/', ProfileView.as_view(), name='profile'),
 
+    path('oauth/', include('social_django.urls', namespace='social')),
+
     
 ]
 
