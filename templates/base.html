@@ -133,11 +133,11 @@
         {% include 'common/messages.html' %}
 
         {% block content %}
-        
+
         {% endblock content %}
 
         <!-- Begin Page Content -->
-        
+
 
       </div>
       <!-- End of Main Content -->
@@ -164,7 +164,7 @@
 
   <!-- Date Time Picker JS -->
   <script src="{% static 'date-time-phone/jquery-ui.js' %}" ></script>
-  <script src="{% static 'date-time-phone/jquery-ui-timepicker-addon.js' %}"></script> 
+  <script src="{% static 'date-time-phone/jquery-ui-timepicker-addon.js' %}"></script>
 
   <script>
     $( function() {
@@ -176,14 +176,14 @@
   <!-- Date Time Picker JS -->
 
   <!-- Phone Mask JS -->
-  <script src="{% static 'date-time-phone/jquery-input-mask-phone-number.min.js' %}"></script> 
+  <script src="{% static 'date-time-phone/jquery-input-mask-phone-number.min.js' %}"></script>
 
   <script>
     //(xxx) xxx-xxxx format code
     $(document).ready(function () {
         $('#id_phone_number').usPhoneFormat({
             format: '(xxx) xxx-xxxx',
-        });   
+        });
     });
   </script>
   <!-- Phone Mask JS -->

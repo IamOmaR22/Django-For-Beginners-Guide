@@ -49,7 +49,7 @@ urlpatterns = [
 
     path('oauth/', include('social_django.urls', namespace='social')),
 
-    
+
 ]
 
 from django.conf import settings
