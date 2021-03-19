@@ -4,7 +4,7 @@ cffi==1.14.0
 chardet==3.0.4
 cryptography==3.3.2
 defusedxml==0.6.0
-Django==3.0.7
+Django==3.1.6
 django-cleanup==4.0.0
 django-crispy-forms==1.9.0
 idna==2.9
